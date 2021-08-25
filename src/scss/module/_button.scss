@@ -1,0 +1,41 @@
+// ==========================================================
+//                   BUTTON RULE
+// ==========================================================
+
+%btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 7px 21px;
+    font-size: em(14px);
+    line-height: (24px/14px);
+    font-weight: $font-weight--md;
+    margin-top: em(30px, 18px);
+    letter-spacing: $letter-space;
+    text-transform: uppercase;
+    border-radius: em(30px, 18px);
+    background-color: transparent;
+    color: color(grey, x-light);
+}
+
+.btn {
+    @extend %btn;
+    &--primary {
+        background: color(yellow);
+        color: color(black, light);
+        transition: background-color $transition ease-out;
+        &:hover {
+            background-color: color(yellow, dark);
+        }
+    }
+    &--secondary {
+        color: color(blue);
+        border: 2px solid color(blue);
+        transition: background-color $transition ease-out;
+        &:hover {
+            background-color: color(blue, light);
+        }
+    }
+    @include bg-colors($ui-colors );
+}

@@ -1,0 +1,252 @@
+.timming {
+    background: linear-gradient(135deg, $green, $green, $green);
+    @include mq('xs') {
+        padding-bottom: 5px;
+    }
+
+    nav {
+        @include flexy($just: space-between, $align: center);
+
+        ul {
+            @include mq('xs') {
+                padding: 5px 0px;
+                &:last-child {
+                    display: none;
+                }
+            }
+            li {
+                display: inline-block;
+                padding: 0px 6px;
+                color: color(grey, x-light);
+                font-size: em(13px);
+                line-height: em(15px, 13px);
+                font-weight: $font-weight--sm;
+                letter-spacing: $letter-space;
+
+                @include mq('xs') {
+                    padding: 0px 4px;
+                }
+
+                a {
+                    padding: 0;
+                    color: $white;
+
+                    i {
+                        margin-right: 10px;
+                        font-size: em(18px);
+                    }
+                }
+            }
+
+            span {
+                i {
+                    margin-right: 10px;
+                    font-size: em(18px);
+                }
+            }
+        }
+    }
+}
+
+// =====================================================================
+//           BOTTOM NAVBAR LAYOUT [2]
+// =====================================================================
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 6px 0px;
+    @include mq('xl') {
+        padding: 3px 0px;
+    }
+
+    nav {
+        @include flexy($just: space-between, $align: center);
+        .logo {
+            padding: 0px;
+        }
+        .white-logo {
+            padding: 0;
+            display: none;
+        }
+        ul {
+            display: none;
+            @include mq('lg') {
+                display: block;
+            }
+
+            li {
+                display: inline-block;
+                color: color(primary, light);
+                text-transform: capitalize;
+            }
+            a {
+                color: $white;
+                font-size: em(18px);
+                line-height: em(53px, 18px);
+                font-weight: $font-weight--xs;
+                letter-spacing: $letter-space;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+// =====================================================================
+//           SUB NAV[SMALL] && MEGA MENU
+// =====================================================================
+.subnav {
+    &:hover .navnode--item0 {
+        display: block;
+        animation: rotateY $transition ease-in-out;
+    }
+    .navnode {
+        @extend %node--top;
+        &--item0 {
+            right: 45px;
+            display: none;
+        }
+    }
+    &--item {
+        position: relative;
+        &:after {
+            @extend %menu-icon;
+        }
+   }
+    .innernav {
+        @extend %menus;
+        width: 200px;
+    }
+}
+
+.megamenu {
+    &:hover .navnode--item1 {
+        display: block;
+        animation: rotateY $transition ease-in-out;
+    }
+    .navnode {
+        @extend %node--top;
+        &--item1 {
+            right: 45px;
+            display: none;
+        }
+    }
+    &--item {
+        position: relative;
+        &:after {
+            @extend %menu-icon;
+        }
+    }
+    .innernav {
+        @extend %menus;
+        box-shadow: 2px 5px 15px rgba(color(black), 0.17);
+        padding: 0;
+        left: 0;
+        width: 100%;
+        &__content {
+            padding: 25px 50px;
+            h1 {
+                @extend %nav-h1;
+            }
+        }
+        &__industry {
+            background-color: color(grey, x-light);
+            padding: 25px;
+            height: 100%;
+            h1 {
+               @extend %nav-h1;
+               color: color(blue);
+            }
+            h1 > a {
+                color: color(blue);
+                padding-left: 0;
+                padding-top: 0;
+                @extend %nav-h1;
+            }
+            &--item {
+                ul {
+                    a {
+                        font-size: em(13px);
+                        color: color(grey, x-dark);
+                        font-weight: $font-weight--sm;
+                    }
+                }
+            }
+        }
+        .srv-single--page {
+            padding: 0px;
+        }
+    }
+}
+
+// ==============================================================
+//              ACTIVATE NAVIGATION
+// ==============================================================
+
+.subnav--item.rotate-active {
+   &::after {
+    transform: rotate(180deg);
+   }
+}
+
+.innernav.menu-active {
+    display: block;
+}
+
+.megamenu--item.rotate-active {
+   &::after {
+    transform: rotate(180deg);
+   }
+}
+
+// =====================================================================
+//              STICKY NAVIGATION
+// =====================================================================
+
+.is-sticky {
+    .navbar {
+        background-color: color(blue);
+        animation: fadeIn $transition ease-in;
+        .logo {
+            padding: 0px;
+            display: none;
+        }
+        .white-logo {
+            display: block;
+        }
+    }
+}
+
+// =====================================================================
+//              NAVIGATION KEYFRAME
+// =====================================================================
+
+@keyframes rotateY {
+    0% {
+        transform: rotateY(90deg)
+    }
+
+    80% {
+        transform: rotateY(-10deg)
+    }
+
+    100% {
+        transform: rotateY(0)
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.4;
+        margin-top: -30px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}

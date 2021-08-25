@@ -1,0 +1,23 @@
+// =======================================================================
+//               CONTAINERS
+// =======================================================================
+
+.site-container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include mq('lg') {
+        width: 95%;
+        max-width: 1000px;
+    }
+    @include mq('xl') {
+        width: 95%;
+        max-width: 1400px;
+    }
+    @include mq('xxl') {
+        width: 85%;
+        max-width: 1600px;
+    }
+    
+}

@@ -1,0 +1,216 @@
+// ==============================================================================
+//                    ABOUT US
+// ==============================================================================
+
+#dpt-about {
+  margin: 80px 0px 30px;
+}
+
+.dpt-about {
+    text-align: center;
+
+    h2 {
+        font-size: em(28px);
+    }
+
+    article {
+        width: 100%;
+        margin: 0 auto;
+        @include mq('lg') {
+            width: 70%;
+        }
+    }
+}
+
+// ==============================================================================
+//                    MISSION
+// ==============================================================================
+
+#dpt-mission {
+    background-color: color(grey, x-light);
+    @extend %pd-50;
+    counter-reset: section;
+}
+
+.dpt-mission {
+    .dpt-small-col {
+        @include flexy();
+    }
+    &--items {
+        background-color: $white;
+        padding: 15px;
+        border-radius: $br-radius;
+        @include flexy($dir: column);
+        border: 1px solid color(grey, x-dark);
+    }
+    h3 {
+        font-weight: $font-weight--md;
+        position: relative;
+        @include p-el('after', 30px, 2px){
+            background-color: color(grey);
+            top: 15px;
+            margin-left: 10px;
+        }
+    }
+}
+
+// ==============================================================================
+//                   TEAM
+// ==============================================================================
+
+#dpt-team {
+    @extend %pd-50;
+    @extend %top;
+}
+
+.dpt-team {
+    @extend %top;
+    margin-top: 50px;
+
+    &-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    &--content {
+        h4 {
+            font-size: em(24px);
+            font-weight: $font-weight--sm;
+            line-height: em(22px, 24px);
+            margin-top: em(15px, 24px)
+        }
+        span {
+            font-weight: $font-weight--xs;
+            letter-spacing: $letter-space;
+        }
+    }
+
+    &--item {
+        @include mq('xs') {
+            margin-top: em(30px);
+        }
+    }
+}
+
+// ==============================================================================
+//                    CLIENTS
+// ==============================================================================
+
+#dpt-clients {
+    background-color: color(grey, x-light);
+    @extend %pd-50;
+}
+
+.dpt-clients {
+
+    &--item {
+        margin-top: em(30px);
+        @include mq('md') {
+            margin-top: 0px;
+        }
+        @extend %top;
+
+        article {
+            h2 {
+                font-size: em(25px);
+                font-weight: $font-weight--sm;
+                line-height: em(38px, 25px);
+                @include mq('md') {
+                    font-size: em(28px);
+                    font-weight: $font-weight--sm;
+                    line-height: em(38px, 28px);
+                    margin-bottom: em(20px, 28px);
+                }
+            }
+
+           li {
+               padding-left: 25px;
+               position: relative;
+               @include p-el($el: 'before', $el-width: 20px, $el-height: 20px) {
+                   content: '✔';
+                   color: color(primary);
+                   top: 3px;
+                   left: 0;
+               }
+           }
+        }
+    }
+
+    &--slider {
+        width: 96%;
+        @include mq('sm') {
+            width: 320px;
+        }
+
+        @include mq('xl') {
+            width: 350px;
+        }
+
+        margin: 0 auto;
+        text-align: center;
+        img {
+            width: 150px;
+            height: 150px;
+            margin:  0 auto em(15px);
+            border-radius: $br-roundy;
+            object-fit: cover;
+            border-left: 5px solid transparent;
+            border-right: 11px solid transparent;
+            border-top: 18px solid transparent;
+            border-bottom: 1px solid transparent;
+        }
+
+        p {
+            font-size: em(18px);
+            font-weight: $font-weight--xs;
+            position: relative;
+
+            @include p-el($el:'before', $el-width: 20px, $el-height: 20px) {
+                content: '\f10d';
+                font-family: FontAwesome;
+                color: color(black, x-light);
+                font-size: em(32px);
+                line-height: 0;
+                left: -5px;
+                top: -10px;
+                @include mq('md') {
+                    left: 13px;
+                }
+
+                @include mq('lg') {
+                    left: -5px;
+                }
+
+                @include mq('xl') {
+                    left: -33px;
+                }
+            }
+        }
+
+        h4 {
+            font-size: em(21px);
+            font-weight: $font-weight--sm;
+            margin-top: em(15px, 21px);
+        }
+
+        span {
+            font-weight: $font-weight--xs;
+            letter-spacing: $letter-space;
+        }
+    }
+
+    &--client {
+        margin-top: 105px;
+        @include mq('md') {
+            margin-top: 180px;
+        }
+        @extend %top;
+
+        img {
+            border: 1px solid color(grey, light);
+            border-radius: $br-radius;
+            width: 100px;
+        }
+    }
+}

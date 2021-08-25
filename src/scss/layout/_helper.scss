@@ -1,0 +1,98 @@
+// ========================================================
+//         ADD Z-INDEX
+// ========================================================
+
+%top {
+    position: relative;
+    z-index: 3;
+}
+
+%p-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// ========================================================
+//          BACKGROUND IMAGE
+// ========================================================
+
+%bg-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 82px;
+    width: 82px;
+    margin: 0 auto;
+    transition: background-image 0.3s ease-in;
+}
+
+// ========================================================
+//          FILL ICON
+// ========================================================
+
+%fill-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: $br-roundy;
+    font-size: em(22px);
+    line-height: em(60px, 22px);
+    position: relative;
+
+    i {
+        @extend %top;
+        color: $white;
+        margin-left: 20px;
+    }
+
+    @include p-el($el: 'before', $el-height: 45px, $el-width: 45px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: $br-roundy;
+        text-align: center;
+        background-color: color(primary);
+        background: color(blue);
+    }
+}
+
+// ========================================================
+//         PADDING MARGIN
+// ======================================================== 
+
+%pd-20 {
+    padding: 20px 0px;
+}
+
+%pd-30 {
+    padding: 30px 0px;
+}
+
+%pd-40 {
+    padding: 40px 0px;
+}
+
+%pd-50 {
+    padding: 50px 0px;
+}
+
+%pd-80 {
+    padding: 80px 0px;
+}
+
+%mt-20 {
+    margin: 20px 0px;
+}
+
+%mt-30 {
+    margin: 30px 0px;
+}
+
+%mt-50 {
+    margin: 50px 0px;
+}
+
+%mt-80 {
+    margin: 80px 0px;
+}

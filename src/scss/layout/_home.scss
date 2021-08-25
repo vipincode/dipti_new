@@ -1,0 +1,232 @@
+// ====================================================================
+// HOME-[ABOUT US]
+// ====================================================================
+
+#about {
+    @extend %mt-80;
+}
+
+.about {
+    article {
+        padding-right: em(25px);
+        width: 100%;
+        position: relative;
+        @include mq('lg') {
+            width: 85%;
+        }
+    }
+}
+
+// ====================================================================
+// HOME-[SERVICES]
+// ====================================================================
+
+#services {
+    @extend %mt-80;
+    position: relative;
+    .thumbnail {
+        height: 450px;
+        max-width: initial;
+        @include mq('md') {
+            height: 535px;
+        }
+        @include mq('lg') {
+            height: 665px;
+        }
+        @include mq('xl') {
+            height: initial;
+            max-width: 100%;
+        }
+    }
+}
+
+.services {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba($black, 0.65), rgba($traquis , 0.45)),
+    linear-gradient(70deg, rgba($black, 0.65), rgba($light-blue, 0.15)),                   
+    linear-gradient(-90deg, rgba($traquis, 0.05), rgba($green , 0.15));
+    filter: saturate(2.2);
+
+    @include e('items') {
+        @extend %pd-50;
+        @include mq('xl') {
+            padding-top: 120px;
+        }
+        @include mq('xxl') {
+            padding-top: 275px;
+        }
+        color: $white;
+        h1 {
+            color: color(yellow);
+        }
+        h3 {
+            color: color(blue);
+            font-size: em(19px);
+            font-weight: $font-weight--sm;
+        }
+        .btn--default {
+            background-color: color(blue);
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 19px;
+            padding: 5px 13px;
+        }
+    }
+    .swiper-container {
+        position: initial;
+        .swiper-pagination {
+            bottom: 10px;
+           @include mq('lg') {
+            bottom: 110px;
+           }
+        }
+    }
+}
+
+// ====================================================================
+// HOME-[DEVELOPMENT]
+// ====================================================================
+
+#development {
+    @extend %mt-80;
+    padding: 50px 0px;
+    h3 {
+        font-size: em(15px);
+        font-weight: $font-weight--sm;
+        line-height: (30px/15px);
+        margin-bottom: 6px;
+    }
+    p {
+        font-size: em(15px);
+    }
+}
+
+.development {
+    .dev-heading {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .dev-col {
+        @include flexy();
+    }
+    .dev-card {
+        border: 1px solid color(grey);
+        padding: 20px 12px;
+        border-radius: $br-radius;
+        @include flexy($align: center);
+        flex: 1;
+        .inr-image {
+            border-right: 1px solid color(grey);
+        }
+        .row {
+            flex: 1;
+            @include flexy($align: center);
+        }
+    }
+}
+
+
+// ====================================================================
+// HOME-[TESTIMONIALS]
+// ====================================================================
+
+#testimonials {
+    position: relative;
+    .tes-thumbnail {
+        width: 100%;
+        height: 565px;
+        object-fit: cover;
+        @include mq('xl') {
+            height: initial;
+        }
+    }
+}
+
+.testimonials {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba($black, 0.65), rgba($traquis , 0.45)),
+    linear-gradient(70deg, rgba($black, 0.65), rgba($light-blue, 0.15)),                   
+    linear-gradient(-90deg, rgba($traquis, 0.05), rgba($green , 0.15));
+    filter: saturate(2.2);
+
+    @include e('items') {
+        padding-top: 80px;
+        @include mq('xxl') {
+            padding-top: 210px;
+        }
+        color: $white;
+        .main-heading {
+            h1 {
+                color: color(yellow);
+            }
+        }
+    }
+
+    &-content {
+        position: relative;
+    }
+
+    &--item {
+        position: relative;
+        z-index: 9;
+        width: 100%;
+        margin: auto;
+        padding: 35px 25px 25px;
+        border-radius: $br-radius;
+        text-align: center;
+        margin-top: 80px;
+        @include mq('lg') {
+            width: 600px;
+        }
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: $br-roundy;
+            object-fit: cover;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            font-size: em(17px);
+            line-height: em(17px, 17px);
+            font-weight: $font-weight--md;
+            letter-spacing: $letter-space;
+            text-transform: capitalize;
+            margin-top: em(15px, 17px);
+        }
+
+        span {
+            font-size: em(14px);
+            letter-spacing: $letter-space;
+            text-transform: capitalize;
+            display: block;
+        }
+
+        p {
+            font-size: em(15px);
+            font-weight: $font-weight--xs;
+            line-height: em(27px, 15px);
+            margin-bottom: em(20px, 15px);
+            position: relative;
+            @include p-el($el: 'after', $el-width: 50px, $el-height: 50px) {
+                content: '\f10e';
+                font-family: FontAwesome;
+                bottom: -30px;
+                font-size: em(38px);
+                color: color(yellow);
+            }
+        }
+    }
+}

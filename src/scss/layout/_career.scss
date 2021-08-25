@@ -1,0 +1,48 @@
+// ===============================================================
+//                 CAREER
+// ===============================================================
+
+#career {
+    @extend %mt-80;
+}
+
+.career {
+    @extend %top;
+
+    &-whyus {
+        margin-top: em(50px);
+    }
+
+    &-opening {
+        margin-top: em(50px);
+        @extend %pd-50;
+        background-color: color(grey, x-light);
+        h1 {
+            @extend %top;
+        }
+    }
+
+    &-postion {
+        h3 {
+            font-size: em(25px);
+            font-weight: $font-weight--md;
+        }
+
+        h4 {
+            font-size: em(18px);
+            font-weight: $font-weight--md;
+            margin-top: em(20px, 18px);
+        }
+
+        &--item {
+           padding: 15px 0px;
+            @include mq('lg') {
+                padding: em(50px);
+            }
+        }
+
+        &--item:nth-child(even) {
+            background-color: color(grey, x-light);
+        }
+    }
+}

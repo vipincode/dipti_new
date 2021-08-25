@@ -1,0 +1,79 @@
+
+// =====================================================================
+//              TOGGLER || SIDEBAR
+// =====================================================================
+
+#toggler {
+    @include mq('lg') {
+        display: none;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    @include mq('xs') {
+        width: 250px;
+    }
+    @include mq('xxs') {
+        width: 230px;
+    }
+    height: 100%;
+    padding-bottom: 45px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: $white;
+    border-right: 1px solid color(grey, light);
+    display: none;
+    overflow-x: scroll;
+    @include mq('lg') {
+        display: none;
+    }
+
+    &-content {
+        text-align: center;
+        margin-top: 75px;
+    }
+}
+
+.sd {
+    margin-top: em(30px);
+    &--subnav {
+        position: relative;
+        &::after {
+            @extend %menu-icon;
+            top: 5px;
+            right: 12px;
+        }
+    }
+
+    &--level1 {
+        display: none;
+    }
+}
+
+.sidebar.js-sidebar--active {
+    display: block;
+}
+
+.sd--subnav.js-subnav-rotate {
+    &::after {
+        transform: rotate(180deg);
+    }
+}
+
+.js-subnav--active {
+    display: block;
+    animation: fadeTo $transition*2 ease;
+}
+
+// ========================================================================
+.hamburger-inner, 
+.hamburger-inner::before, 
+.hamburger-inner::after,
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner::before, 
+.hamburger.is-active .hamburger-inner::after {
+    background-color: color(blue, x-light);
+}

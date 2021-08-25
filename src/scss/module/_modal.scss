@@ -1,0 +1,58 @@
+// ==================================================================
+//               MODALS CSS [EDITED]
+// ==================================================================
+
+.blocker {
+    z-index: 9999;
+}
+
+.modal {
+    border-radius: $br-radius;
+    -webkit-border-radius: $br-radius;
+    padding: 0px;
+    &-header {
+        background: linear-gradient(90deg, color(secondary), color(primary));
+        color: $white;
+        text-align: center;
+        padding: 4px;
+        border-top-left-radius: $br-radius;
+        border-top-right-radius: $br-radius;
+
+        h3 {
+            font-size: em(28px);
+            font-weight: $font-weight--sm;
+        }
+    }
+
+    &-content {
+        padding: 15px;
+        @include mq('lg') {
+            padding: 30px;
+        }
+    }
+
+    .btn {
+        margin-top: 0px;
+    }
+
+    &-sm {
+       @include mq('lg') {
+        max-width: 700px;
+       }
+    }
+    &-md {
+        @include mq('lg') {
+         max-width: 800px;
+        }
+    }
+    &-lg {
+        @include mq('xl') {
+         max-width: 900px;
+        }
+    }
+    &-xl {
+        @include mq('xl') {
+            max-width: 1200px;
+        }
+    }
+}

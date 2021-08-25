@@ -1,0 +1,130 @@
+// =====================================================================
+//           BANNER LAYOUT [2]
+// =====================================================================
+@import '../../../node_modules/vegas/dist/vegas';
+
+#banner {
+    height: 565px;
+    @include mq('lg') {
+        height: 650px;
+    }
+    @include mq('xl') {
+        height: 100vh;
+    }
+    position: relative;
+}
+
+.banner {
+    background-color: color(blue);
+    height: 100%;
+    @extend %top;
+    background-position: center;
+    background-size: 100%;
+    @include p-el($el: before, $el-height: 100%, $el-width: 100%) {
+        top: 0;
+        z-index: 3;
+        background: linear-gradient(135deg, rgba($black, 0.65), rgba($traquis , 0.45)),
+        linear-gradient(70deg, rgba($black, 0.65), rgba($light-blue, 0.15)),                   
+        linear-gradient(-90deg, rgba($traquis, 0.05), rgba($green , 0.15)),
+        url('../../images/pattern.png') rgba($black  , 0.45);                  
+        filter: saturate(2.2);
+    }
+    @include flexy($dir: column, $just: center, $align: center);
+
+    &--items {
+       @extend %p-center;
+       padding-top: 50px;
+       @media(max-width: 1023px) {
+           width: 100%;
+       }
+       z-index: 5;
+       article {
+           width: 100%;
+           padding-left: 15px;
+           padding-right: 15px;
+           color: $white;
+           text-align: center;
+           @include mq('lg') {
+               width: 900px;
+               max-width: 900px;
+           }
+           @include mq('xxl') {
+                width: 1200px;
+                max-width: 1200px;
+            }
+            h1 {
+                color: $accent;
+                font-size: em(36px);
+                line-height: em(38px, 36px);
+                font-weight: $font-weight--xl;
+                text-transform: uppercase;
+
+                @include mq('lg') {
+                    font-size: em(48px);
+                    line-height: em(58px, 48px);
+                }
+
+                @include mq('xl') {
+                    font-size: em(52px);
+                    line-height: em(58px, 52px);
+                }
+
+                @include mq('xxl') {
+                    font-size: em(65px);
+                    line-height: em(58px, 65px);
+                    margin-bottom: em(20px, 65px);
+                }
+            }
+            h2 {
+                color: $white;
+                font-size: em(32px);
+                line-height: em(45px, 32px);
+                font-weight: $font-weight--xs;
+                text-transform: uppercase;
+                @include mq('xs') {
+                    font-size: em(17px);
+                    line-height: em(30px, 17px);
+                }
+                @include mq('xl') {
+                    font-size: em(38px);
+                    line-height: em(58px, 38px);
+                }
+                @include mq('xxl') {
+                    font-size: em(55px);
+                    line-height: em(58px, 55px);
+                    margin-bottom: em(20px, 55px);
+                }
+            }
+            h1.fields {
+                font-size: em(28px);
+                line-height: em(48px, 28px);
+                margin-bottom: 0;
+                font-weight: $font-weight--sm;
+                color: $accent;
+                @include mq('xs') {
+                    font-size: em(18px);
+                    line-height: em(30px, 18px);
+                }
+                @include mq('lg') {
+                    font-size: em(34px);
+                    line-height: em(58px, 34px);
+                }
+            }
+            p {
+                color: $white;
+                @include mq('xs') {
+                    font-size: em(15px);
+                }
+                @include mq('md') {
+                    font-size: em(21px);
+                }
+                @include mq('xxl') {
+                    font-size: em(24px);
+                }
+            }
+            .btn {
+                background-color: $accent;
+            }
+       }
+    }
+}
