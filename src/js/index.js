@@ -128,10 +128,10 @@ $(".navbar").sticky({
 import vegas from 'vegas';
 $(".banner").vegas({
   slides: [
-      { src: "../../images/banner2.jpg" },
-      { src: "../../images/banner3.jpg" },
-      { src: "../../images/banner1.jpg" },
-      { src: "../../images/banner4.jpg" }
+      { src: "./images/banner2.jpg" },
+      { src: "./images/banner3.jpg" },
+      { src: "./images/banner1.jpg" },
+      { src: "./images/banner4.jpg" }
   ],
   autoplay: true,
   loop: true,
