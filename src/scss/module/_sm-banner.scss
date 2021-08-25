@@ -1,0 +1,65 @@
+// ========================================================================================
+// SM-BANNER
+// ========================================================================================
+#sm-header {
+    position: relative;
+    height: 350px;
+    margin-bottom: 80px;
+}
+#page-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.page-header {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    padding: 120px 0px;
+
+    @include mq('lg') {
+        background-position: 0px -60px;
+    }
+
+    @include p-el($el: 'before', $el-width: 100%, $el-height: 100%) {
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(135deg, rgba($black, 0.65), rgba($traquis , 0.45)),
+        linear-gradient(70deg, rgba($black, 0.65), rgba($light-blue, 0.15)),                   
+        linear-gradient(-90deg, rgba($traquis, 0.05), rgba($green , 0.15)),
+        url('../../images/overlay-pattern.png') $black;
+        filter: saturate(2.2);
+        opacity: 0.7;
+    }
+    @include p-el($el: 'after', $el-width: 100%, $el-height: 100%) {
+        top: 0;
+        z-index: 1;
+        background: url('../../images/bg_lines.svg');
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: center;
+        opacity: 0.04;
+    }
+
+    &--items {
+        @extend %top;
+        color: $white;
+        text-align: center;
+    
+        h1 {
+            font-size: em(32px);
+            line-height: em(34px, 32px);
+            margin-bottom: em(20px, 32px);
+            font-weight: $font-weight--lg;
+            text-transform: capitalize;
+            @include mq(md) {
+                font-size: em(65px);
+                line-height: em(80px, 65px);
+                margin-bottom: 0px;
+                font-weight: $font-weight--sm;
+            }
+         }
+    }
+}

@@ -1,52 +1,52 @@
-.timming {
-    background: linear-gradient(135deg, $green, $green, $green);
-    @include mq('xs') {
-        padding-bottom: 5px;
-    }
+// .timming {
+//     background: linear-gradient(135deg, $green, $green, $green);
+//     @include mq('xs') {
+//         padding-bottom: 5px;
+//     }
 
-    nav {
-        @include flexy($just: space-between, $align: center);
+//     nav {
+//         @include flexy($just: space-between, $align: center);
 
-        ul {
-            @include mq('xs') {
-                padding: 5px 0px;
-                &:last-child {
-                    display: none;
-                }
-            }
-            li {
-                display: inline-block;
-                padding: 0px 6px;
-                color: color(grey, x-light);
-                font-size: em(13px);
-                line-height: em(15px, 13px);
-                font-weight: $font-weight--sm;
-                letter-spacing: $letter-space;
+//         ul {
+//             @include mq('xs') {
+//                 padding: 5px 0px;
+//                 &:last-child {
+//                     display: none;
+//                 }
+//             }
+//             li {
+//                 display: inline-block;
+//                 padding: 0px 6px;
+//                 color: color(grey, x-light);
+//                 font-size: em(13px);
+//                 line-height: em(15px, 13px);
+//                 font-weight: $font-weight--sm;
+//                 letter-spacing: $letter-space;
 
-                @include mq('xs') {
-                    padding: 0px 4px;
-                }
+//                 @include mq('xs') {
+//                     padding: 0px 4px;
+//                 }
 
-                a {
-                    padding: 0;
-                    color: $white;
+//                 a {
+//                     padding: 0;
+//                     color: $white;
 
-                    i {
-                        margin-right: 10px;
-                        font-size: em(18px);
-                    }
-                }
-            }
+//                     i {
+//                         margin-right: 10px;
+//                         font-size: em(18px);
+//                     }
+//                 }
+//             }
 
-            span {
-                i {
-                    margin-right: 10px;
-                    font-size: em(18px);
-                }
-            }
-        }
-    }
-}
+//             span {
+//                 i {
+//                     margin-right: 10px;
+//                     font-size: em(18px);
+//                 }
+//             }
+//         }
+//     }
+// }
 
 // =====================================================================
 //           BOTTOM NAVBAR LAYOUT [2]
