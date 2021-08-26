@@ -87,7 +87,7 @@
 .secondary-heading {
     font-size: em(31px);
     line-height: em(38px, 31px);
-    color: color(black, light);
+    color: color(black, x-light);
     letter-spacing: $letter-space;
     font-weight: $font-weight--xs;
     text-transform: capitalize;
@@ -139,7 +139,7 @@
     font-size: em(17px);
     line-height: em(28px, 17px);
     font-weight: $font-weight--xs;
-    color: color(grey, x-light);
+    color: $white;
     letter-spacing: $letter-space;
     position: relative;
     @extend %top;

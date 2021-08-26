@@ -1,5 +1,5 @@
 // =========================================================================
-//                 SWIPER 1
+// SWIPER 1
 // =========================================================================
 import Swiper from 'swiper/bundle';
 
@@ -37,7 +37,7 @@ const swiper1 = new Swiper('.swiper1', {
 });
 
 // =========================================================================
-//                 SWIPER 3
+// SWIPER 3
 // =========================================================================
 
 const swiper3 = new Swiper('.swiper3', {
@@ -55,7 +55,7 @@ const swiper3 = new Swiper('.swiper3', {
 });
 
 // =========================================================================
-//                  SWIPER 4
+// SWIPER 4
 // =========================================================================
 
 const swiper4 = new Swiper('.swiper4', {
@@ -74,7 +74,7 @@ const swiper4 = new Swiper('.swiper4', {
 });
 
 // =========================================================================
-//                  SWIPER 5
+// SWIPER 5
 // =========================================================================
 
 const swiper5 = new Swiper('.swiper5', {
@@ -87,7 +87,7 @@ const swiper5 = new Swiper('.swiper5', {
 });
 
 // =========================================================================
-//                 TYPE WRITER
+// TYPE WRITER
 // =========================================================================
 
 import Typewriter from 'typewriter-effect/dist/core';
@@ -110,7 +110,7 @@ if(typeFields) {
 }
 
 // =========================================================================
-//                 JQUERY
+// JQUERY
 // =========================================================================
 import $ from "jquery";
 import 'jquery-sticky/jquery.sticky';
@@ -140,29 +140,37 @@ $(".banner").vegas({
 });
 
 // =========================================================================
-//                 ACCORDIAN
+// SIMPLE PARRALAX
 // =========================================================================
 import simpleParallax from 'simple-parallax-js';
-var image = document.getElementsByClassName('thumbnail');
+
+const image = document.getElementsByClassName('thumbnail');
 new simpleParallax(image, {
   maxTransition: 60,
-  orientation: ' up right',
+  orientation: 'up right',
   delay: .6,
 	transition: 'cubic-bezier(0,0,0,1)'
 });
 
 
-var image = document.getElementsByClassName('tes-thumbnail');
-new simpleParallax(image, {
+const tesThumb = document.getElementsByClassName('tes-thumbnail');
+new simpleParallax(tesThumb, {
   maxTransition: 60,
-  orientation: ' up right',
+  orientation: 'up right',
   delay: .6,
 	transition: 'cubic-bezier(0,0,0,1)'
 });
 
+const bannerThumb = document.getElementsByClassName('banner-thumb');
+new simpleParallax(bannerThumb, {
+  maxTransition: 80,
+  orientation: 'right',
+  delay: .6,
+	transition: 'cubic-bezier(0,0,0,1)'
+});
 
 // =========================================================================
-//                 ACCORDIAN
+// ACCORDIAN
 // =========================================================================
 
 const accButton = document.querySelectorAll("#tab-button");
@@ -181,7 +189,7 @@ if(accButton) {
 }
 
 // =========================================================================
-//                 DESKTOP NAVBAR
+// DESKTOP NAVBAR
 // =========================================================================
 
 $('.subnav--links').on('mouseover', function(e) {
@@ -199,7 +207,7 @@ $('.subnav--links').on('mouseleave', function(e) {
 });
 
 // =========================================================================
-//              MOBILE NAV & TOGGLER
+// MOBILE NAV & TOGGLER
 // =========================================================================
 $('.sd--subnav').on('click', function(event) {
   event.preventDefault();
@@ -218,7 +226,6 @@ $('.sd--subnav').on('click', function(event) {
 $("#toggler").on('click', function() {
   $(this).toggleClass("is-active");
   $(".sidebar").animate({ width: 'toggle',opacity: 'toggle', height: "100%"}, 500);
-  // $(".sidebar").toggleClass("js-sidebar--active");
 });
 
 $(window).on('resize', function(){
@@ -230,7 +237,7 @@ $(window).on('resize', function(){
 
 
 // =========================================================================
-//             MODAL POPUP
+// MODAL POPUP
 // =========================================================================
  import 'jquery-modal/jquery.modal';
 

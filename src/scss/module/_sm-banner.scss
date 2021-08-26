@@ -1,28 +1,17 @@
 // ========================================================================================
 // SM-BANNER
 // ========================================================================================
+
 #sm-header {
     position: relative;
-    height: 350px;
-    margin-bottom: 80px;
 }
-#page-header {
+
+.page-header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-}
-.page-header {
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    background-size: cover;
-    padding: 120px 0px;
-
-    @include mq('lg') {
-        background-position: 0px -60px;
-    }
-
+    height: 100%;
     @include p-el($el: 'before', $el-width: 100%, $el-height: 100%) {
         top: 0;
         z-index: 1;
@@ -43,8 +32,12 @@
         opacity: 0.04;
     }
 
+    @include mq('lg') {
+        background-position: 0px -60px;
+    }
     &--items {
-        @extend %top;
+        @extend %p-center;
+        z-index: 2;
         color: $white;
         text-align: center;
     

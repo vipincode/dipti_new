@@ -4,8 +4,8 @@
 
 #footer {
     background-color: color(black, light);
-    color: color(black, x-light);
-    background-image: url('../../images/map.png');
+    color: color(black, xx-light);
+    background-image: url('../../images/footer-map.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -16,7 +16,7 @@
     a {
         transition: color $transition ease-in;
         padding: 0px;
-        color: color(black, x-light);
+        color: color(black, xx-light);
         &:hover {
             color: color(blue);
         }

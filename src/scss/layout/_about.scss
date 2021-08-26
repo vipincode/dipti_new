@@ -7,18 +7,8 @@
 }
 
 .dpt-about {
-    text-align: center;
-
     h2 {
         font-size: em(28px);
-    }
-
-    article {
-        width: 100%;
-        margin: 0 auto;
-        @include mq('lg') {
-            width: 70%;
-        }
     }
 }
 
@@ -27,27 +17,29 @@
 // ==============================================================================
 
 #dpt-mission {
-    background-color: color(grey, x-light);
-    @extend %pd-50;
     counter-reset: section;
 }
 
+.dpt-mission-odd {
+    @extend %pd-50;
+}
+
 .dpt-mission {
+    background-color: color(grey, x-light);
+    @extend %pd-50;
     .dpt-small-col {
         @include flexy();
     }
     &--items {
-        background-color: $white;
         padding: 15px;
         border-radius: $br-radius;
         @include flexy($dir: column);
-        border: 1px solid color(grey, x-dark);
     }
     h3 {
         font-weight: $font-weight--md;
         position: relative;
         @include p-el('after', 30px, 2px){
-            background-color: color(grey);
+            background-color: color(yellow);
             top: 15px;
             margin-left: 10px;
         }
@@ -169,7 +161,7 @@
             @include p-el($el:'before', $el-width: 20px, $el-height: 20px) {
                 content: '\f10d';
                 font-family: FontAwesome;
-                color: color(black, x-light);
+                color: color(blue);
                 font-size: em(32px);
                 line-height: 0;
                 left: -5px;
