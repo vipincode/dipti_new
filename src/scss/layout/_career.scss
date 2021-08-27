@@ -16,9 +16,10 @@
     &-opening {
         margin-top: em(50px);
         @extend %pd-50;
-        background-color: color(grey, x-light);
+        background-color: color(blue, x-light);
         h1 {
             @extend %top;
+            color: color(blue);
         }
     }
 
@@ -42,7 +43,7 @@
         }
 
         &--item:nth-child(even) {
-            background-color: color(grey, x-light);
+            background-color: color(blue, x-light);
         }
     }
 }

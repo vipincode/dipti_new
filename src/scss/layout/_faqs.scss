@@ -1,0 +1,30 @@
+// =====================================================================================================
+// FAQs
+// =====================================================================================================
+
+#faqs {
+    @extend %mt-80;
+}
+
+.faqs {
+    &-question {
+        background-color: color(blue, x-light);
+        @extend %pd-50;
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.faqs-works {
+    text-align: center;
+    article {
+        width: 100%;
+        @include  mq('lg') {
+            width: 60%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+}

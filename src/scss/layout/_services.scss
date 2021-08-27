@@ -1,3 +1,133 @@
 // =======================================================================
 // SERVICES
 // =======================================================================
+
+#srvdetail {
+    @extend %mt-50;
+}
+
+.srvdetail {
+    &-card {
+        background-color: $white;
+        box-shadow: 0 0 10px rgba($black, 0.08);
+        padding: 15px;
+        border-radius: $br-radius;
+        article {
+            h3 {
+                font-size: em(16px);
+            }
+            p {
+                font-size: em(15px);
+            }
+            a {
+                background-color: color(blue);
+                display: inline-block;
+                color: $white;
+                padding: 0 14px;
+                line-height: (23px/16px);
+                border-radius: $br-radius;
+            }
+        }
+    }
+}
+
+
+// =======================================================================
+// SERVICES[QUOTE]
+// =======================================================================
+
+#srvquote {
+    @extend %mt-80; 
+
+    .srv-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        @include mq('md') {
+            width: 95%;
+        }
+        @include mq('lg') {
+            width: 80%;
+            max-width: 800px;
+        }
+    }
+}
+
+// =======================================================================
+// SERVICES: [CUSTOMER]
+// =======================================================================
+
+#customer {
+    @extend %mt-80; 
+    @extend %pd-50;
+    background-color: color(blue, x-light);
+}
+
+.customer {
+    &-text {
+        padding: 50px 0px;
+        text-align: center;
+        @include  mq('lg') {
+            padding: 75px 0;
+            text-align: left;
+        }
+        h2 {
+            font-size: em(32px);
+            @include  mq('md') {
+                font-size: em(36px);
+            }
+        }
+
+        p {
+            font-size: 17px;
+        }
+    }
+    &-help {
+        text-align: center;
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: auto;
+        }
+        h4 {
+            font-size: em(19px);
+            line-height: (21px/19px);
+            margin-top: 15px;
+        }
+
+        span {
+            display: block;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            @include  mq('lg') {
+                padding: 8px 45px;
+            }
+        }
+    }
+}
+
+// =======================================================================
+// SERVICES: [HELP]
+// =======================================================================
+
+
+#srvhelp {
+    @extend %pd-50;
+    background-color: color(blue, x-light);
+}
+
+.srvhelp {
+    text-align: center;
+   &-content {
+    @extend %pd-50;
+    img {
+        margin: 0 auto;
+    }
+   }
+}

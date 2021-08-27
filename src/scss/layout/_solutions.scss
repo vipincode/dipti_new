@@ -1,3 +1,28 @@
 // =======================================================================
 // SOLUTIONS
 // =======================================================================
+
+#solution {
+    @extend %mt-80;
+}
+
+.solution {
+    &-card {
+        border-radius: $br-radius;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba($black, 0.08);
+        &--img {
+            overflow: hidden;
+            img {
+                transform-origin: 50% 50%;
+                transition: transform $transition ease-in;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        &--content {
+            padding: 15px;
+        }
+    }
+}

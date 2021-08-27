@@ -25,7 +25,7 @@
 }
 
 .dpt-mission {
-    background-color: color(grey, x-light);
+    background-color: color(blue, x-light);
     @extend %pd-50;
     .dpt-small-col {
         @include flexy();
@@ -39,7 +39,7 @@
         font-weight: $font-weight--md;
         position: relative;
         @include p-el('after', 30px, 2px){
-            background-color: color(yellow);
+            background-color: color(green);
             top: 15px;
             margin-left: 10px;
         }
@@ -67,12 +67,13 @@
 
     &--content {
         h4 {
-            font-size: em(24px);
+            font-size: em(20px);
             font-weight: $font-weight--sm;
-            line-height: em(22px, 24px);
-            margin-top: em(15px, 24px)
+            line-height: em(22px, 20px);
+            margin-top: em(15px, 20px)
         }
         span {
+            font-size: em(14px);
             font-weight: $font-weight--xs;
             letter-spacing: $letter-space;
         }
@@ -90,7 +91,7 @@
 // ==============================================================================
 
 #dpt-clients {
-    background-color: color(grey, x-light);
+    background-color: color(blue, x-light);
     @extend %pd-50;
 }
 
@@ -121,7 +122,7 @@
                position: relative;
                @include p-el($el: 'before', $el-width: 20px, $el-height: 20px) {
                    content: '✔';
-                   color: color(primary);
+                   color: color(blue);
                    top: 3px;
                    left: 0;
                }
@@ -181,12 +182,14 @@
         }
 
         h4 {
-            font-size: em(21px);
+            font-size: em(18px);
+            line-height: (21px/18px);
             font-weight: $font-weight--sm;
-            margin-top: em(15px, 21px);
+            margin-top: em(15px, 18px);
         }
 
         span {
+            font-size: em(14px);
             font-weight: $font-weight--xs;
             letter-spacing: $letter-space;
         }
