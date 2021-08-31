@@ -1,0 +1,27 @@
+// ============================================================================
+// WEB APPLICATION
+// ============================================================================
+
+.lcf {
+    &-dev {
+        h2 {
+            font-size: em(26px);
+            line-height: (36px/26px);
+            margin-bottom: 12px;
+            span {
+                color: color(blue);
+            }
+        }
+    }
+}
+
+.dlp {
+    &-srv-icon {
+        text-align: center;
+        span {
+            font-size: em(50px);
+            line-height: (50px/50px);
+            color: color(blue);
+        }
+    }
+}

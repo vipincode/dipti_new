@@ -174,9 +174,11 @@ new simpleParallax(bannerThumb, {
 // =========================================================================
 
 const accButton = document.querySelectorAll("#tab-button");
+const panel = document.querySelectorAll(".panel");
 if(accButton) {
   for(let i = 0; i < accButton.length; i +=1 ) {
-    accButton[i].addEventListener("click", () => {
+    accButton[i].addEventListener("click", (e) => {
+      _removeBtnActive()
       accButton[i].classList.toggle("active");
       let panel= accButton[i].nextElementSibling;
       if(panel.style.maxHeight) {
@@ -185,6 +187,13 @@ if(accButton) {
         panel.style.maxHeight= panel.scrollHeight + "px";
       }
     })
+  }
+}
+
+function _removeBtnActive() {
+  for(let i = 0; i < accButton.length; i++) {
+    accButton[i].classList.remove('active');
+    panel[i].style.maxHeight= null;
   }
 }
 
@@ -205,6 +214,20 @@ $('.subnav--links').on('mouseleave', function(e) {
   $('.innernav').removeClass('menu-active');
   e.stopPropagation();
 });
+
+// ADDING NAV BACKGROUND ON HOVER
+
+$('.subnav--links').on('mouseover', function(e) {
+  e.preventDefault();
+  $('.navbar').addClass('is-hover');
+  e.stopPropagation();
+});
+$('.subnav--links').on('mouseleave', function(e) {
+  e.preventDefault();
+  $('.navbar').removeClass('is-hover');
+  e.stopPropagation();
+});
+
 
 // =========================================================================
 // MOBILE NAV & TOGGLER

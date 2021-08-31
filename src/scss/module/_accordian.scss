@@ -3,22 +3,14 @@
 // ======================================================================
 
 .accordian {
-    width: 95%;
-    margin:  0 auto;
-
-    @include mq('lg') {
-        width: 65%;
-    }
-
-    @include mq('xl') {
-        width: 45%;
-    }
+    width: 100%;
+    padding: 0 15px;
 }
 
 .panel {
     max-height: 0;
     overflow: hidden;
-    border-bottom: 1px solid color(grey, light);
+    border-bottom: 1px solid color(blue, light);
     transition: max-height 0.2s ease-out;
 
     p {
@@ -32,30 +24,25 @@
     outline: none;
     cursor: pointer;
     margin: 15px 0px 15px;
-    font-size: em(21px);
-    font-weight: $font-weight--xs;
+    font-size: em(16px);
+    font-weight: $font-weight--md;
+    color: color(black, x-light);
     text-align: left;
     width: 100%;
     position: relative;
     @include p-el($el: 'after', $el-width: 15px, $el-height: 15px) {
-        top: 0;
-        right: 0;
+        top: -2px;
+        right: 18px;
         content: '\f107';
         font-family: FontAwesome;
         transition: transform 0.3s ease-in;
-        color: color(primary);
+        color: color(blue, light);
+        font-size: em(21px);
     }
 }
 
 #tab-button.active {
-    position: relative;
     @include p-el($el: 'after', $el-width: 15px, $el-height: 15px) {
-        top: 11px;
-        right: 0;
-        content: '\f107';
-        font-family: FontAwesome;
-        transform: rotate(-180deg);
-        transition: transform 0.3s ease-in;
-        color: color(primary);
+        content: '\f106';
     }
 }

@@ -14,6 +14,7 @@
 
 .footer {
     a {
+        font-size: em(15px);
         transition: color $transition ease-in;
         padding: 0px;
         color: color(black, xx-light);
@@ -27,13 +28,13 @@
         }
 
         h3 {
-            font-size: em(24px);
-            font-weight: $font-weight--xs;
-            margin-bottom: em(13px, 24px);
+            font-size: em(17px);
+            font-weight: $font-weight--md;
+            margin-bottom: em(13px, 17px);
             position: relative;
             @include p-el($el: 'after', $el-width: 35px, $el-height: 2px) {
                 display: block;
-                background-color: color(yellow);
+                background-color: color(blue);
             }
         }
 
@@ -41,10 +42,11 @@
             li {
                 font-size: em(15px);
                 font-weight: 300;
-
-                @include mq('lg') {
-                    font-size: em(17px);
-                }
+            }
+        }
+        &--item {
+            span {
+                font-size: em(15px);
             }
         }
     }
@@ -77,9 +79,9 @@
             }
 
             h3 {
-                font-size: em(24px);
-                margin-top: em(30px, 24px);
-                font-weight: $font-weight--xs;
+                font-size: em(17px);
+                margin-top: em(30px, 17px);
+                font-weight: $font-weight--md;
 
                 @include mq('lg') {
                     margin-top: 0px;
@@ -88,9 +90,8 @@
 
             .days {
                 li {
-                    font-size: em(16px);
+                    font-size: em(14px);
                     font-weight: $font-weight--xs;
-
                     strong {
                         font-weight: $font-weight--sm;
                     }
@@ -104,6 +105,7 @@
     margin-top: em(15px); 
     input[type="email"] {
         width: 100%;
+        background-color: color(grey);
         font-size: em(15px);
         line-height: em(30px, 15px);
         border-radius: $br-radius;
@@ -150,10 +152,10 @@
         }
     }
     a {
+
         display: inline-block;
         color: color(blue);
         padding: 0 3px;
-        font-weight: $font-weight--sm;
     }
 }
 

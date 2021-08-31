@@ -49,6 +49,7 @@
         z-index: 2;
         color: $white;
         text-align: center;
+        width: 100%;
         @include  mq('xs'){
             width: 100%;
             padding: 0 3px;
@@ -60,8 +61,8 @@
             font-weight: $font-weight--lg;
             text-transform: capitalize;
             @include mq(md) {
-                font-size: em(65px);
-                line-height: em(80px, 65px);
+                font-size: em(52px);
+                line-height: em(72px, 52px);
                 margin-bottom: 0px;
                 font-weight: $font-weight--sm;
             }

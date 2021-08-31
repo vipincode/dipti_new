@@ -1,0 +1,125 @@
+
+// ==========================================================================================
+// SOFTWARE DEVELOPMENT
+// ==========================================================================================
+
+#sft {
+    @extend %mt-80;
+}
+
+.sft {
+    @include e('content') {
+        article {
+            h1 {
+                font-size: em(32px);
+                line-height: (42px/32px);
+                margin-bottom: em(12px, 32px)
+            }
+            p {
+                font-size: em(17px);
+            }
+        }
+    }
+}
+
+// ==========================================================================================
+// SOFTWARE LIFECYCLE
+// ==========================================================================================
+
+#lcf {
+    background-color: color(blue, x-light);
+    @extend %pd-50;
+}
+
+.lcf {
+    @include e('lifecycle') {
+        @include m('heading') {
+            @extend %srv-heading;
+        }
+    }
+}
+
+// ==========================================================================================
+// SERVICE DEVELOPMENT
+// ==========================================================================================
+
+#dlp {
+    @extend %mt-80;
+}
+
+.dlp {
+    @include e('heading') {
+        @extend %srv-heading;
+    }
+}
+
+// ==========================================================================================
+// LETS TALK
+// ==========================================================================================
+
+#talk {
+    background-color: color(blue, x-light);
+    @extend %pd-50;
+    h2 {
+        font-size: em(28px);
+        line-height: (42px/28px);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    form {
+        width: 100%;
+        @include mq('lg') {
+            width: 75%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            margin: 0;
+        }
+    }
+}
+
+// ==========================================================================================
+// TECHNOLOGY WE USE
+// ==========================================================================================
+
+#tech {
+    @extend %mt-80;
+}
+
+.tech {
+    @include e('heading') {
+        @extend %srv-heading;
+    }
+    @include e('content') {
+        @include m('item') {
+            background-color: color(blue, x-light);
+            padding: 30px;   
+            height: 100%;
+            img {
+                width: 42px;
+                height: 42px;
+                object-fit: contain;
+            }
+            h3 {
+                font-size: em(16px);
+                line-height: (30px/16px);
+                margin-bottom: 8px;
+            }     
+            ul {
+                li {
+                    display: inline-block;
+                    padding: 5px 12px;
+                    font-size: em(13px);
+                    line-height: (14px/13px);
+                    font-weight: $font-weight--sm;
+                    border: 1px solid color(blue);
+                    border-radius: 30px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
