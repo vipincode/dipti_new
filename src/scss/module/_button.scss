@@ -11,30 +11,31 @@
     font-size: em(14px);
     line-height: (24px/14px);
     font-weight: $font-weight--md;
-    margin-top: em(30px, 18px);
+    margin-top: em(30px, 14px);
     letter-spacing: $letter-space;
     text-transform: uppercase;
-    border-radius: em(30px, 18px);
+    border-radius: em(30px, 14px);
     background-color: transparent;
-    color: color(grey, x-light);
+    color: $white;
 }
 
 .btn {
     @extend %btn;
     &--primary {
-        background: color(yellow);
-        color: color(black, light);
+        background: linear-gradient(165deg, color(primary), color(secondary));
+        color: $white;
         transition: background-color $transition ease-out;
         &:hover {
-            background-color: color(yellow, dark);
+            background-color: color(secondary, dark);
         }
     }
     &--secondary {
-        color: color(blue);
-        border: 2px solid color(blue);
-        transition: background-color $transition ease-out;
+        color: color(black);
+        border: 1px solid color(black);
+        transition: background-color $transition ease-out, color $transition ease-in;
         &:hover {
-            background-color: color(blue, light);
+            background-color: color(black);
+            color: $white;
         }
     }
     @include bg-colors($ui-colors );

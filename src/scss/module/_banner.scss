@@ -15,7 +15,7 @@
 }
 
 .banner {
-    background-color: color(blue);
+    background-color: color(primary);
     height: 100%;
     @extend %top;
     background-position: center;
@@ -23,9 +23,7 @@
     @include p-el($el: before, $el-height: 100%, $el-width: 100%) {
         top: 0;
         z-index: 3;
-        background: linear-gradient(135deg, rgba($black, 0.65), rgba($traquis , 0.45)),
-        linear-gradient(70deg, rgba($black, 0.65), rgba($light-blue, 0.15)),                   
-        linear-gradient(-90deg, rgba($traquis, 0.05), rgba($green , 0.15)),
+        background: linear-gradient(195deg, rgba($black, 0.65), rgba(black, 0.55), rgba($orange, 0.48)),
         url('../../images/pattern.png') rgba($black  , 0.45);                  
         filter: saturate(2.2);
     }
@@ -53,7 +51,6 @@
                 max-width: 1200px;
             }
             h1 {
-                color: $accent;
                 font-size: em(36px);
                 line-height: em(38px, 36px);
                 font-weight: $font-weight--xl;
@@ -100,7 +97,7 @@
                 line-height: em(48px, 28px);
                 margin-bottom: 0;
                 font-weight: $font-weight--sm;
-                color: $accent;
+                color: color(yellow);
                 @include mq('xs') {
                     font-size: em(18px);
                     line-height: em(30px, 18px);
@@ -121,9 +118,6 @@
                 @include mq('xxl') {
                     font-size: em(24px);
                 }
-            }
-            .btn {
-                background-color: $accent;
             }
        }
     }

@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: $font-family--primary;
-    color: color(black, x-light);
+    color: color(black, light);
     font-size: $base-font;
     line-height: $base--line/$base-font;
     font-weight: $font-weight--xs;
@@ -45,4 +45,6 @@ a {
 img {
     display: block;
     max-width: 100%;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }

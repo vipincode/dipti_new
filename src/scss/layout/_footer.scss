@@ -3,8 +3,8 @@
 // ============================================================
 
 #footer {
-    background-color: color(black, light);
-    color: color(black, xx-light);
+    background-color: color(black);
+    color: $white;
     background-image: url('../../images/footer-map.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -14,12 +14,12 @@
 
 .footer {
     a {
-        font-size: em(15px);
+        font-size: em(14px);
         transition: color $transition ease-in;
         padding: 0px;
-        color: color(black, xx-light);
+        color: $white;
         &:hover {
-            color: color(blue);
+            color: color(primary);
         }
     }
     &-callus {
@@ -34,14 +34,17 @@
             position: relative;
             @include p-el($el: 'after', $el-width: 35px, $el-height: 2px) {
                 display: block;
-                background-color: color(blue);
+                background-color: color(primary);
             }
         }
 
         ul {
             li {
-                font-size: em(15px);
+                font-size: em(14px);
                 font-weight: 300;
+                a {
+                    font-size: inherit;
+                }
             }
         }
         &--item {
@@ -66,7 +69,7 @@
                 margin-top: em(20px);
                 a {
                     padding: 0;
-                    color: color(blue, light);
+                    color: color(primary, light);
                     transition: color $transition ease-in-out;
                     &:hover {
                         color: color(secondary);
@@ -127,12 +130,12 @@
         background-color: transparent;
         padding: 3px 10px;
         border-radius: $br-radius;
-        color: color(blue);
-        border: 1px solid color(blue);
+        color: color(primary);
+        border: 1px solid color(primary);
         transition: background-color $transition ease-in, color $transition ease-in;
         &:hover {
-            background-color: color(blue);
-            color: color(yellow);
+            background-color: color(primary);
+            color: color(primary, x-light);
         }
         @include mq('lg') {
             line-height: em(32px, 15px);
@@ -154,22 +157,8 @@
     a {
 
         display: inline-block;
-        color: color(blue);
+        color: color(primary);
         padding: 0 3px;
-    }
-}
-
-// ============================================================
-// SECTION: [ADD]         
-// ============================================================
-
-.gr-business {
-    @extend %pd-80;
-    h2 {
-        font-size: em(26px);
-        @include mq('lg') {
-            font-size: em(36px);
-        }
     }
 }
 
@@ -178,7 +167,15 @@
 // ============================================================
 
 #work-with-us {
-    @extend %pd-80;
+    @extend %mt-80;
+    text-align: center;
+    article {
+        @include mq('lg') {
+            width: 75%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
     h2 {
         font-size: em(26px);
         @include mq('lg') {

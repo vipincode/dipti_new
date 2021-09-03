@@ -9,7 +9,7 @@
             line-height: (36px/26px);
             margin-bottom: 12px;
             span {
-                color: color(blue);
+                color: color(primary);
             }
         }
     }
@@ -19,9 +19,9 @@
     &-srv-icon {
         text-align: center;
         span {
-            font-size: em(50px);
-            line-height: (50px/50px);
-            color: color(blue);
+            font-size: em(42px);
+            line-height: (50px/42px);
+            color: color(primary);
         }
     }
 }

@@ -27,7 +27,7 @@
 // ==========================================================================================
 
 #lcf {
-    background-color: color(blue, x-light);
+    background-color: color(grey, x-light);
     @extend %pd-50;
 }
 
@@ -35,6 +35,11 @@
     @include e('lifecycle') {
         @include m('heading') {
             @extend %srv-heading;
+        }
+        .accordian {
+            @include mq('xxl') {
+                margin-top: 60px;
+            }
         }
     }
 }
@@ -58,7 +63,7 @@
 // ==========================================================================================
 
 #talk {
-    background-color: color(blue, x-light);
+    background-color: color(grey, x-light);
     @extend %pd-50;
     h2 {
         font-size: em(28px);
@@ -95,7 +100,7 @@
     }
     @include e('content') {
         @include m('item') {
-            background-color: color(blue, x-light);
+            background-color: color(grey, x-light);
             padding: 30px;   
             height: 100%;
             img {
@@ -104,18 +109,18 @@
                 object-fit: contain;
             }
             h3 {
-                font-size: em(16px);
-                line-height: (30px/16px);
-                margin-bottom: 8px;
+                font-size: em(15px);
+                line-height: (30px/15px);
+                margin-top: 5px;
             }     
             ul {
                 li {
                     display: inline-block;
                     padding: 5px 12px;
-                    font-size: em(13px);
-                    line-height: (14px/13px);
+                    font-size: em(12px);
+                    line-height: (14px/12px);
                     font-weight: $font-weight--sm;
-                    border: 1px solid color(blue);
+                    border: 1px solid color(black, light);
                     border-radius: 30px;
                     margin-bottom: 5px;
                 }

@@ -52,8 +52,7 @@
         transform: translate(-50%, -50%);
         border-radius: $br-roundy;
         text-align: center;
-        background-color: color(primary);
-        background: color(blue);
+        background: linear-gradient(195deg, color(primary), color(secondary));
     }
 }
 

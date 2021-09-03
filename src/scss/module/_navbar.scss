@@ -8,7 +8,7 @@
     left: 0;
     width: 100%;
     .is-hover {
-        background-color: color(blue);
+        background-color: color(black);
     }
 }
 
@@ -27,10 +27,6 @@
         @include flexy($just: space-between, $align: center);
         .logo {
             padding: 0px;
-        }
-        .white-logo {
-            padding: 0;
-            display: none;
         }
         ul {
             display: none;
@@ -123,10 +119,10 @@
             height: 100%;
             h1 {
                @extend %nav-h1;
-               color: color(blue);
+               color: color(primary);
             }
             h1 > a {
-                color: color(blue);
+                color: color(primary);
                 padding-left: 0;
                 padding-top: 0;
                 @extend %nav-h1;
@@ -134,8 +130,7 @@
             &--item {
                 ul {
                     a {
-                        font-size: em(13px);
-                        color: color(grey, x-dark);
+                        color: color(black);
                         font-weight: $font-weight--sm;
                     }
                 }
@@ -173,15 +168,8 @@
 
 .is-sticky {
     .navbar {
-        background-color: color(blue);
+        background-color: color(black);
         animation: fadeIn $transition ease-in;
-        .logo {
-            padding: 0px;
-            display: none;
-        }
-        .white-logo {
-            display: block;
-        }
     }
 }
 

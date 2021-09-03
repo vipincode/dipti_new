@@ -11,33 +11,27 @@ $font-weight--xl           : 700;
 $font-weight--xxl          : 800;
 
 // COLOR PALLETS
-$dark-blue                 : #184e77;
-$light-blue                : #168aad;
-$blue                      : #1a759f;
-$traquis                   : #34a0a4;
-$green                     : #76c893;
-$dark-green                : #52b69a;
-$light-green               : #99d98c;
-$lemon-yellow              : #d9ed92;
-$black                     : #000000;
+$orange                    : #f77f00;
+$red                       : #d62828;
+$yellow                    : #fcbf49;
+$teal                      : #eae2b7;
+$black                     : #003049;
 $grey                      : #f0efeb;
-$accent-green              : #CDF931;
 $white                     : #ffffff;
 
 // UI COLORS
-$primary--color            : $green;
-$secondary--color          : $dark-green;
-$accent                    : $accent-green;
-$yellow                    : $lemon-yellow;
+$primary--color            : $orange;
+$secondary--color          : $red;
+$accent                    : $teal;
 
 // COLOR MAPS
 
 $ui-colors : (
-	default   : #34a0a4,
-    info      : #b5179e,
-    warning   : #f48c06,
-    success   : #b5e48c,
-    error     : #ffafcc,
+	default   : #14213d,
+    info      : #f4978e,
+    warning   : #ff6b6b,
+    success   : #2ec4b6,
+    error     : #ef476f,
 );
 
 $colors: (
@@ -46,43 +40,29 @@ $colors: (
         light   : lighten($grey, 3%),
         base    : $grey,
         dark    : darken($grey, 10%),
-        x-dark  : darken($grey, 38%),
     ),
     black: (
-		xx-light: lighten($black, 62%),
-		x-light : lighten($black, 32%),
-        light   : lighten($black, 14%),
+		x-light : lighten($black, 21%),
+        light   : lighten($black, 13%),
         base    : $black,
         dark    : darken($black, 10%),
     ),
     yellow: (
-		x-light : lighten($yellow, 20%),
-        light   : lighten($yellow, 15%),
+		x-light : lighten($yellow, 21%),
+        light   : lighten($yellow, 14%),
         base    : $yellow,
-        dark    : darken($yellow, 15%),
-    ),
-    green: (
-		x-light : lighten($dark-green, 34%),
-        light   : lighten($dark-green, 15%),
-        base    : $dark-green,
-        dark    : darken($dark-green, 15%),
-    ),
-	blue: (
-		x-light : lighten($traquis, 52%),
-        light   : lighten($traquis, 25%),
-        base    : $traquis,
-        dark    : darken($traquis, 15%),
+        dark    : darken($yellow, 10%),
     ),
     primary: (
-		x-light : lighten($primary__color, 35%),
-        light   : lighten($primary__color, 8%),
-        base    : $primary__color,
-        dark    : darken($primary__color, 12%),
+		x-light : lighten($primary--color, 31%),
+        light   : lighten($primary--color, 12%),
+        base    : $primary--color,
+        dark    : darken($primary--color, 12%),
     ),
     secondary: (
-		x-light : lighten($light-blue, 25%),
-        light   : lighten($light-blue, 8%),
-        base    : $light-blue,
+		x-light : lighten($secondary--color, 48%),
+        light   : lighten($secondary--color, 12%),
+        base    : $secondary--color,
     ),
 );
 

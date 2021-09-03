@@ -3,22 +3,26 @@
 // =======================================================================
 
 .swiper-pagination-bullet {
-    background: color(yellow, dark);
+    background: color(yellow);
 }
+
 .swiper-button-prev, 
 .swiper-button-next {
-    background-color: color(blue);
-    color: color(yellow);
+    background-color: color(primary);
+    color: $white;
     border-radius: $br-radius;
     padding: 0 18px;
 }
+
 .swiper-button-prev:after, 
 .swiper-button-next:after {
     font-size: em(21px);
 }
+
 .swiper-button-next {
     right: -6px;
 }
+
 .swiper-button-prev {
     left: -6px;
 }

@@ -11,7 +11,7 @@
     -webkit-border-radius: $br-radius;
     padding: 0px;
     &-header {
-        background: linear-gradient(90deg, color(secondary), color(primary));
+        background: color(primary);
         color: $white;
         text-align: center;
         padding: 4px;

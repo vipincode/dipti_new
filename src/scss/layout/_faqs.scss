@@ -8,7 +8,7 @@
 
 .faqs {
     &-question {
-        background-color: color(blue, x-light);
+        background-color: color(grey, x-light);
         @extend %pd-50;
         h1 {
             text-align: center;

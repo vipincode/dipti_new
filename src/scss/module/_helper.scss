@@ -4,7 +4,7 @@
 
 %menus {
     position: absolute;
-    background: color(blue);
+    background: color(primary);
     padding: em(15px);
     width: 100%;
     z-index: 9;
@@ -13,10 +13,9 @@
     li {
         display: block;
         a {
-            color: color(blue, x-light);
             padding: 0px;
-            font-size: em(14px);
-            line-height: (30px/14px);
+            font-size: em(13px);
+            line-height: (30px/13px);
             font-weight: $font-weight--xs;
         }
     }
@@ -29,7 +28,7 @@
     top: 9px;
     right: -2px;
     font-size: em(20px);
-    color: color(blue, light);
+    color: color(primary, light);
     transition: transform $transition ease-in-out;
 }
 
@@ -43,7 +42,7 @@
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 15px solid color(blue, light);
+    border-bottom: 15px solid color(primary, light);
 }
 
 // =======================================================================================
@@ -51,9 +50,9 @@
 // ======================================================================================== 
 
 %nav-h1 {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: $font-weight--sm;
-    line-height: (24px/17px);
+    line-height: (24px/16px);
     margin-bottom: 5px;
-    color: color(blue, light);
+    color: $white;
 }

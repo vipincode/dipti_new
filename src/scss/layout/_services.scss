@@ -20,7 +20,7 @@
                 font-size: em(15px);
             }
             a {
-                background-color: color(blue);
+                background-color: color(primary);
                 display: inline-block;
                 color: $white;
                 padding: 0 14px;
@@ -61,7 +61,7 @@
 #customer {
     @extend %mt-80; 
     @extend %pd-50;
-    background-color: color(blue, x-light);
+    background-color: color(grey, x-light);
 }
 
 .customer {
@@ -74,6 +74,7 @@
         }
         h2 {
             font-size: em(32px);
+            
             @include  mq('md') {
                 font-size: em(36px);
             }
@@ -119,7 +120,7 @@
 
 #srvhelp {
     @extend %pd-50;
-    background-color: color(blue, x-light);
+    background-color: color(grey, x-light);
 }
 
 .srvhelp {

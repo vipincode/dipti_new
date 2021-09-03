@@ -18,6 +18,18 @@
 }
 
 // ====================================================================
+// HOME-[WORK]
+// ====================================================================
+
+#work {
+    h3 {
+        font-size: em(17px);
+        margin-top: 12px;
+        font-weight: $font-weight--md;
+    }
+}
+
+// ====================================================================
 // HOME-[SERVICES]
 // ====================================================================
 
@@ -46,43 +58,69 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba($black, 0.65), rgba($traquis , 0.45)),
-    linear-gradient(70deg, rgba($black, 0.65), rgba($light-blue, 0.15)),                   
-    linear-gradient(-90deg, rgba($traquis, 0.05), rgba($green , 0.15));
+    background: linear-gradient(195deg, rgba($black, 0.65), rgba(black, 0.55), rgba($orange, 0.48));
     filter: saturate(2.2);
 
     @include e('items') {
+        color: $white;
         @extend %pd-50;
         @include mq('xl') {
-            padding-top: 120px;
+            padding-top: 115px;
         }
         @include mq('xxl') {
             padding-top: 275px;
         }
-        color: $white;
-        h1 {
-            color: color(yellow);
-        }
         h3 {
-            color: color(blue);
             font-size: em(19px);
             font-weight: $font-weight--sm;
         }
-        .btn--default {
-            background-color: color(blue);
-            font-size: 11px;
+        .btn--line {
+            font-size: em(15px);
             font-weight: 400;
             line-height: 19px;
-            padding: 5px 13px;
+            padding: 8px 0px;
+            color: color(yellow);
+            transition: color $transition ease-out;
+            &:hover {
+                color: color(primary);
+            }
+        }
+    }
+
+    @include e('slider') {
+        margin-top: 22px;
+        @include mq('lg') {
+            margin-top: 0px;
         }
     }
     .swiper-container {
         position: initial;
         .swiper-pagination {
             bottom: 10px;
-           @include mq('lg') {
-            bottom: 110px;
-           }
+            @include mq('md') {
+                bottom: 65px;
+            }
+            @include mq('lg') {
+                bottom: 110px;
+            }
+            @include mq('xxl') {
+                bottom: 280px;
+            }
+        }
+    }
+    @include e('more') {
+        position: absolute;
+        bottom: -44px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include mq('md') {
+            bottom: 8px;
+        }
+        @include mq('lg') {
+            bottom: 40px;
+        }
+        @include mq('xxl') {
+            bottom: 140px;
         }
     }
 }
@@ -93,11 +131,10 @@
 
 #development {
     @extend %mt-80;
-    padding: 50px 0px;
     h3 {
         font-size: em(15px);
         font-weight: $font-weight--sm;
-        line-height: (30px/15px);
+        line-height: (24px/15px);
         margin-bottom: 6px;
     }
     p {
@@ -129,6 +166,24 @@
     }
 }
 
+// ====================================================================
+// HOME-[TECHNOLOGY]
+// ====================================================================
+
+#technology {
+    @extend %mt-80;
+}
+
+.technology {
+    .br-border {
+        border-bottom: 1px dotted color(grey);
+        padding: 30px 0px;
+        align-items: center;
+    }
+    h3 {
+        font-size: em(17px);
+    }
+}
 
 // ====================================================================
 // HOME-[TESTIMONIALS]
@@ -152,9 +207,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(135deg, rgba($black, 0.65), rgba($traquis , 0.45)),
-    linear-gradient(70deg, rgba($black, 0.65), rgba($light-blue, 0.15)),                   
-    linear-gradient(-90deg, rgba($traquis, 0.05), rgba($green , 0.15));
+    background: linear-gradient(195deg, rgba($black, 0.65), rgba(black, 0.55), rgba($orange, 0.48));
     filter: saturate(2.2);
 
     @include e('items') {
@@ -165,7 +218,7 @@
         color: $white;
         .main-heading {
             h1 {
-                color: color(yellow);
+                color: $white;
             }
         }
     }
@@ -227,6 +280,29 @@
                 font-size: em(38px);
                 color: color(yellow);
             }
+        }
+    }
+}
+
+// ====================================================================
+// HOME-[PARTNERS]
+// ====================================================================
+
+#partner  {
+    @extend %mt-80;
+    @extend %pd-30;
+    .dev-heading {
+        @include mq('xs') {
+            margin-bottom: 22px;
+        }
+    }
+    img {
+        filter: grayscale(100%);
+        opacity: 0.45;
+        transition: opacity $transition ease-in, filter $transition ease-in;
+        &:hover {
+            filter: grayscale(0);
+            opacity: 1;
         }
     }
 }

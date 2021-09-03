@@ -75,5 +75,5 @@
 .hamburger.is-active .hamburger-inner, 
 .hamburger.is-active .hamburger-inner::before, 
 .hamburger.is-active .hamburger-inner::after {
-    background-color: color(blue, x-light);
+    background-color: $white;
 }
