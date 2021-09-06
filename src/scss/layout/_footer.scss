@@ -14,7 +14,7 @@
 
 .footer {
     a {
-        font-size: em(14px);
+        font-size: em(15px);
         transition: color $transition ease-in;
         padding: 0px;
         color: $white;
@@ -40,7 +40,7 @@
 
         ul {
             li {
-                font-size: em(14px);
+                font-size: em(15px);
                 font-weight: 300;
                 a {
                     font-size: inherit;
@@ -93,7 +93,7 @@
 
             .days {
                 li {
-                    font-size: em(14px);
+                    font-size: em(15px);
                     font-weight: $font-weight--xs;
                     strong {
                         font-weight: $font-weight--sm;

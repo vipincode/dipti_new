@@ -79,7 +79,7 @@
     .innernav {
         @extend %menus;
         width: 200px;
-        box-shadow: 2px 5px 15px rgba(color(black), 0.17);
+        // box-shadow: 2px 5px 15px rgba(color(black), 0.17);
     }
 }
 
@@ -103,7 +103,7 @@
     }
     .innernav {
         @extend %menus;
-        box-shadow: 2px 5px 15px rgba(color(black), 0.17);
+        // box-shadow: 2px 5px 15px rgba(color(black), 0.17);
         padding: 0;
         left: 0;
         width: 100%;

@@ -4,7 +4,7 @@
 
 %menus {
     position: absolute;
-    background: color(primary);
+    background: color(black);
     padding: em(15px);
     width: 100%;
     z-index: 9;
@@ -14,8 +14,8 @@
         display: block;
         a {
             padding: 0px;
-            font-size: em(13px);
-            line-height: (30px/13px);
+            font-size: em(15px);
+            line-height: (30px/15px);
             font-weight: $font-weight--xs;
         }
     }
@@ -51,8 +51,16 @@
 
 %nav-h1 {
     font-size: 16px;
-    font-weight: $font-weight--sm;
+    font-weight: $font-weight--md;
     line-height: (24px/16px);
     margin-bottom: 5px;
-    color: $white;
+    color: color(primary, light)
+}
+
+// =======================================================================================
+//                 ALIGN ITEMS CENTER
+// ========================================================================================
+
+.align-center {
+    @include flexy($dir: column, $just: center);
 }

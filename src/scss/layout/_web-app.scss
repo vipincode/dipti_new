@@ -13,6 +13,17 @@
             }
         }
     }
+    @include e('image') {
+        img {
+            width: 600px;
+            @include mq('xs') {
+                margin-top: 50px;
+            }
+            @include mq('xl') {
+                margin-left: 50px;
+            }
+        }
+    }
 }
 
 .dlp {
@@ -22,6 +33,26 @@
             font-size: em(42px);
             line-height: (50px/42px);
             color: color(primary);
+        }
+    }
+
+    .card {
+        img {
+            width: 45px;
+        }
+    }
+}
+
+.sft {
+    @include e('image') {
+        img {
+            width: 600px;
+            @include mq('xs') {
+                margin-top: 50px;
+            }
+            @include mq('xl') {
+                margin-left: 50px;
+            }
         }
     }
 }

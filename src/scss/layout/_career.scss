@@ -25,6 +25,14 @@
         }
     }
 
+    .cr-bg {
+        background: linear-gradient(rgba(color(grey, light), 0.65), rgba(color(grey, light), 0.6)),
+                    url('../../images/cr-section-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
     &-postion {
         h3 {
             font-size: em(25px);
