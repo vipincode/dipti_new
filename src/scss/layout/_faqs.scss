@@ -10,15 +10,15 @@
     &-question {
         background-color: color(grey, x-light);
         @extend %pd-50;
-        h1 {
-            text-align: center;
+        h2 {
+            @extend %center;
             margin-bottom: 30px;
         }
     }
 }
 
 .faqs-works {
-    text-align: center;
+    @extend %center;
     article {
         width: 100%;
         @include  mq('lg') {

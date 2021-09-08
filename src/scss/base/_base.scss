@@ -24,8 +24,17 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
 }
 
+h3 {
+    font-size: em(18px);
+    font-weight: $font-weight--md;
+}
+
 p {
     margin: 0;
+    font-size: em(17px);
+    line-height: em(28px, 17px);
+    font-weight: $font-weight--xs;
+    margin-top: 5px;
 }
 
 ul,

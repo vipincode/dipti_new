@@ -10,14 +10,7 @@
 .sft {
     @include e('content') {
         article {
-            h1 {
-                font-size: em(32px);
-                line-height: (42px/32px);
-                margin-bottom: em(12px, 32px);
-            }
-            p {
-                font-size: em(17px);
-            }
+            @extend %srv-heading;
         }
     }
 }
@@ -28,18 +21,18 @@
 
 #lcf {
     background-color: color(grey, x-light);
-    @extend %pd-50;
+    @extend %pd-50;  
 }
 
 .lcf {
     @include e('lifecycle') {
-        @include m('heading') {
-            @extend %srv-heading;
-        }
         .accordian {
             @include mq('xxl') {
                 margin-top: 60px;
             }
+        }
+        @include m('heading') {
+            @extend %srv-heading;
         }
     }
 }
@@ -54,6 +47,7 @@
 
 .dlp {
     @include e('heading') {
+        margin-bottom: 50px;
         @extend %srv-heading;
     }
 }
@@ -66,10 +60,15 @@
     background-color: color(grey, x-light);
     @extend %pd-50;
     h2 {
-        font-size: em(28px);
-        line-height: (42px/28px);
-        text-align: center;
+        font-size: em(24px);
+        line-height: em(30px, 24px);
+        font-weight: $font-weight--lg;
+        @extend %center;
         margin-bottom: 50px;
+         @include mq('lg') {
+            font-size: em(28px);
+            line-height: (38px/28px);
+       }
     }
 
     form {
@@ -97,6 +96,11 @@
 .tech {
     @include e('heading') {
         @extend %srv-heading;
+        @extend %center;
+        @include  mq('lg') {
+            width: 800px;
+            margin: 0 auto 50px;
+        }
     }
     @include e('content') {
         @include m('item') {

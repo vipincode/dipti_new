@@ -14,10 +14,10 @@
         border-radius: $br-radius;
         article {
             h3 {
-                font-size: em(16px);
+                margin-top: 8px;
             }
             p {
-                font-size: em(15px);
+                margin-bottom: 12px;
             }
             a {
                 background-color: color(primary);
@@ -73,15 +73,14 @@
             text-align: left;
         }
         h2 {
-            font-size: em(32px);
-            
-            @include  mq('md') {
-                font-size: em(36px);
+            font-size: em(24px);
+            @include mq('lg') {
+                font-size: em(32px);
             }
         }
 
         p {
-            font-size: 17px;
+            font-size: em(18px);
         }
     }
     &-help {
@@ -93,7 +92,7 @@
             border-radius: 50%;
             margin: auto;
         }
-        h4 {
+        h3 {
             font-size: em(19px);
             line-height: (21px/19px);
             margin-top: 15px;

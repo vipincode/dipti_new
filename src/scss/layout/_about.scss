@@ -1,15 +1,26 @@
 // ==============================================================================
+//                    CENTER IMAGE HELPER
+// ==============================================================================
+
+%di-iamge {
+    img {
+        margin: auto;
+    }
+}
+
+.sections {
+    &:nth-child(even) {
+        background-color: color(grey, x-light);
+    }
+}
+
+// ==============================================================================
 //                    ABOUT US
 // ==============================================================================
 
 #dpt-about {
   margin: 80px 0px 30px;
-}
-
-.dpt-about {
-    h2 {
-        font-size: em(28px);
-    }
+  @extend %di-iamge;
 }
 
 // ==============================================================================
@@ -18,14 +29,10 @@
 
 #dpt-mission {
     counter-reset: section;
-}
-
-.dpt-mission-odd {
-    @extend %pd-50;
+    @extend %di-iamge;
 }
 
 .dpt-mission {
-    background-color: color(grey, x-light);
     @extend %pd-50;
     .dpt-small-col {
         @include flexy();
@@ -36,6 +43,7 @@
         @include flexy($dir: column);
     }
     h3 {
+        font-size: em(23px);
         font-weight: $font-weight--md;
         position: relative;
         @include p-el('after', 30px, 2px){
@@ -53,6 +61,7 @@
 #dpt-team {
     @extend %pd-50;
     @extend %top;
+    @extend %di-iamge;
 }
 
 .dpt-team {
@@ -98,8 +107,8 @@
 // ==============================================================================
 
 #dpt-clients {
-    background-color: color(grey, x-light);
     @extend %pd-50;
+    @extend %di-iamge;
 }
 
 .dpt-clients {

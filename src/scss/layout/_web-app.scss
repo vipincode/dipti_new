@@ -4,10 +4,8 @@
 
 .lcf {
     &-dev {
+        @extend %srv-heading;
         h2 {
-            font-size: em(26px);
-            line-height: (36px/26px);
-            margin-bottom: 12px;
             span {
                 color: color(primary);
             }

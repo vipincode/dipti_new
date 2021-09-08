@@ -14,7 +14,7 @@
 
 .footer {
     a {
-        font-size: em(15px);
+        font-size: em(17px);
         transition: color $transition ease-in;
         padding: 0px;
         color: $white;
@@ -28,28 +28,25 @@
         }
 
         h3 {
-            font-size: em(17px);
+            font-size: em(20px);
             font-weight: $font-weight--md;
-            margin-bottom: em(13px, 17px);
+            margin-bottom: em(13px, 20px);
             position: relative;
-            @include p-el($el: 'after', $el-width: 35px, $el-height: 2px) {
+            @include p-el($el: 'after', $el-width: 35px, $el-height: 1px) {
                 display: block;
-                background-color: color(primary);
+                background-color: color(primary, light);
             }
         }
 
         ul {
             li {
-                font-size: em(15px);
+                font-size: em(17px);
                 font-weight: 300;
-                a {
-                    font-size: inherit;
-                }
             }
         }
         &--item {
             span {
-                font-size: em(15px);
+                font-size: em(17px);
             }
         }
     }
@@ -58,9 +55,9 @@
 
         &--item {
             p {
-                font-size: em(15px);
+                font-size: em(17px);
                 font-weight: $font-weight--xs;
-                line-height: em(24px, 15px);
+                line-height: em(24px, 17px);
                 width: em(250px);
             }
 
@@ -77,15 +74,20 @@
                 }
                 
                 li {
-                    margin-right: em(20px, 15px);
+                    margin-right: em(20px, 17px);
                 }
             }
 
             h3 {
-                font-size: em(17px);
-                margin-top: em(30px, 17px);
+                font-size: em(20px);
+                margin-top: em(30px, 20px);
+                margin-bottom: em(13px, 20px);
                 font-weight: $font-weight--md;
-
+                position: relative;
+                @include p-el($el: 'after', $el-width: 35px, $el-height: 1px) {
+                    display: block;
+                    background-color: color(primary, light);
+                }
                 @include mq('lg') {
                     margin-top: 0px;
                 }
@@ -93,7 +95,7 @@
 
             .days {
                 li {
-                    font-size: em(15px);
+                    font-size: em(17px);
                     font-weight: $font-weight--xs;
                     strong {
                         font-weight: $font-weight--sm;
@@ -148,7 +150,8 @@
     p {
         font-size: em(13px);
         font-weight: $font-weight--xs;
-        text-align: center;
+        
+        @extend %center;
         letter-spacing: $letter-space;
         @include mq('lg') {
             font-size: em(14px);
@@ -168,18 +171,13 @@
 
 #work-with-us {
     @extend %mt-80;
-    text-align: center;
+    
+    @extend %center;
     article {
         @include mq('lg') {
             width: 75%;
             max-width: 800px;
             margin: 0 auto;
-        }
-    }
-    h2 {
-        font-size: em(26px);
-        @include mq('lg') {
-            font-size: em(36px);
         }
     }
 }

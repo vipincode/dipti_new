@@ -79,7 +79,6 @@
     .innernav {
         @extend %menus;
         width: 200px;
-        // box-shadow: 2px 5px 15px rgba(color(black), 0.17);
     }
 }
 
@@ -103,31 +102,31 @@
     }
     .innernav {
         @extend %menus;
-        // box-shadow: 2px 5px 15px rgba(color(black), 0.17);
         padding: 0;
         left: 0;
         width: 100%;
         &__content {
             padding: 25px 50px;
-            h1 {
-                @extend %nav-h1;
+            strong {
+                @extend %nav-heading;
             }
         }
         &__industry {
             background-color: color(grey, x-light);
             padding: 25px;
             height: 100%;
-            h1 {
-               @extend %nav-h1;
+            strong {
+               @extend %nav-heading;
                color: color(primary);
             }
-            h1 > a {
-                color: color(primary);
-                padding-left: 0;
-                padding-top: 0;
-                @extend %nav-h1;
-            }
             &--item {
+                strong {
+                    a {
+                        @extend %nav-heading;
+                        color: color(primary);
+                        padding-left: 0;
+                    }
+                }
                 ul {
                     a {
                         color: color(black);
