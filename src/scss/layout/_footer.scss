@@ -104,6 +104,14 @@
             }
         }
     }
+
+    &-socials {
+        padding-top: 80px;
+        @include flexy($just: center, $align: center);
+        .icons {
+            width: 288px;
+        }
+    }
 }
 
 .news-letter {

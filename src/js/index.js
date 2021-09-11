@@ -67,7 +67,15 @@ const swiper4 = new Swiper('.swiper4', {
   },
   breakpoints: {
     1024: {
-      slidesPerView: 2,
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    1920: {
+      slidesPerView: 4,
       spaceBetween: 24,
     },
   }
@@ -112,7 +120,7 @@ if(typeFields) {
 // =========================================================================
 // JQUERY
 // =========================================================================
-import $ from "jquery";
+// import $ from "jquery";
 import 'jquery-sticky/jquery.sticky';
 
 // STICKY NAV

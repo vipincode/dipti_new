@@ -1,0 +1,49 @@
+// =====================================================================================
+// FONT ICON
+// =====================================================================================
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+// =======================================================================================
+// FOOTER ICON
+// =======================================================================================
+
+.icons {
+    position: relative;
+    li, a {
+        width: 33px;
+        height: 33px;
+        display: block;
+    }
+    li {
+        background-image: url('../../images/icon-sprite.png');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+    }
+    @include e('fb') {
+        left: 0px;
+        background-position: 0 0;
+    }
+    @include e('tw') {
+        left: 50px;
+        background-position: -44px 0
+    }
+    @include e('in') {
+        left: 100px;
+        background-position: -135px 0
+    }
+    @include e('insta') {
+        left: 150px;
+        background-position: -90px 0
+    }
+    @include e('tel') {
+        left: 200px;
+        background-position: -180px 0
+    }
+    @include e('wt') {
+        left: 250px;
+        background-position: -225px 0
+    }
+}

@@ -43,8 +43,6 @@
         @include flexy($dir: column);
     }
     h3 {
-        font-size: em(23px);
-        font-weight: $font-weight--md;
         position: relative;
         @include p-el('after', 30px, 2px){
             background-color: color(primary);
@@ -67,19 +65,21 @@
 .dpt-team {
     @extend %top;
     margin-top: 50px;
-
+    .swiper4 {
+        @extend %mt-50;
+    }
     &-image {
-        border-radius: $br-radius;
         overflow: hidden;
         margin-bottom: 5px;
-        box-shadow: 0 0 5px rgba($black, 0.09);
+        background-color: color(grey, light);
+        padding-top: 15px;
         img {
-            width: 100%;
+            width: 120px;
         }
     }
-
     &--content {
-        padding: 0 12px;
+        @extend %center;
+        padding: 20px;
         h4 {
             font-size: em(18px);
             font-weight: $font-weight--sm;
@@ -112,14 +112,12 @@
 }
 
 .dpt-clients {
-
     &--item {
         margin-top: em(30px);
         @include mq('md') {
             margin-top: 0px;
         }
         @extend %top;
-
         article {
             h2 {
                 font-size: em(25px);
@@ -186,18 +184,17 @@
                 @include mq('md') {
                     left: 13px;
                 }
-
                 @include mq('lg') {
                     left: -5px;
                 }
-
                 @include mq('xl') {
-                    left: -33px;
+                    left: -6px;
+                    top: 11px;
                 }
             }
         }
 
-        h4 {
+        h3 {
             font-size: em(18px);
             line-height: (21px/18px);
             font-weight: $font-weight--sm;

@@ -6,6 +6,12 @@
     @extend %mt-80;
 }
 
+.sections {
+    img {
+        @extend %auto;
+    }
+}
+
 .career {
     @extend %top;
 

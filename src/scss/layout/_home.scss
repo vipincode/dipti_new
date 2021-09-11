@@ -62,6 +62,9 @@
 
     @include e('items') {
         color: $white;
+        @include mq('xs') {
+            padding: 15px 0px;
+        }
         @extend %pd-50;
         @include mq('xl') {
             padding-top: 115px;
@@ -264,7 +267,10 @@
             font-weight: $font-weight--xs;
             line-height: em(27px, 15px);
             margin-bottom: em(20px, 15px);
-            padding-bottom: 40px;
+            padding-bottom: 10px;
+            @include mq('lg') {
+                padding-bottom: 40px;
+            }
             position: relative;
             @include p-el($el: 'after', $el-width: 50px, $el-height: 50px) {
                 content: '\f10e';

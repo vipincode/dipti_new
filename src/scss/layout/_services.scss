@@ -12,6 +12,9 @@
         box-shadow: 0 0 10px rgba($black, 0.08);
         padding: 15px;
         border-radius: $br-radius;
+        img {
+            width: 42px;
+        }
         article {
             h3 {
                 margin-top: 8px;
@@ -28,6 +31,18 @@
                 border-radius: $br-radius;
             }
         }
+    }
+    @include e('dev'){
+        margin-bottom: 50px;
+    }
+    @include e('media'){
+        margin-bottom: 50px;
+    }
+    @include e('marketing'){
+        margin-bottom: 50px;
+    }
+    @include e('legal'){
+        margin-bottom: 50px;
     }
 }
 
