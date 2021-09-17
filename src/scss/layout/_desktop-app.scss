@@ -1,0 +1,30 @@
+// ========================================================================================
+//  DESKTOP APPLICATION
+// ========================================================================================
+
+#dsk {
+    @extend %mt-80;
+    h2 {
+        @extend %srv-heading;
+    }
+    p {
+        margin-bottom: 8px;
+    }
+}
+
+.dsk {
+    @include e('services') {
+        @extend %mt-80;
+        @include  m('heading') {
+            @extend %center;
+            @include  mq('xl') {
+                width: 70%;
+                max-width: 800px;
+                margin:  0 auto;
+            }
+        }
+        @include m('content') {
+            margin-top: 50px;
+        }
+    }
+}

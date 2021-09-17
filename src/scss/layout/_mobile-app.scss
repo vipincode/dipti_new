@@ -1,0 +1,68 @@
+// ===============================================================================================
+// MOBILE APPLICATION
+// ===============================================================================================
+
+#mob {
+    @extend %mt-80;
+    h2 {
+        @extend %srv-heading;
+    }
+    p {
+        margin-bottom: 8px;
+    }
+}
+
+.mb {
+    @include e('app') {
+        ul {
+            margin-top: 30px;
+            li {
+                padding: 10px 52px;
+                position: relative;
+                @include p-el($el: 'before', $el-height: 32px, $el-width: 32px) {
+                    background-image: url('../../images/tick.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    left: 0;
+                }
+            }
+        }
+    }
+    @include e('platform') {
+        position: relative;
+        @extend %mt-80;
+        @include m('heading') {
+            @extend %center;
+            margin-bottom: 80px!important;
+            @include mq('lg') {
+                width: 800px;
+                margin: 0 auto;
+            }
+        }
+
+        @include m('content') {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            @extend %pd-80;
+            filter: saturate(2.2);
+            color: color(grey, light);
+        }
+    }
+
+    @include e('approach') {
+        @extend %mt-80;
+    }
+
+    @include e('card') {
+        padding: 25px;
+        border-radius: $br-radius;
+        border: 1px dotted color(grey, light);
+        h3 {
+            color: color(yellow, x-light);
+        }
+    }
+}

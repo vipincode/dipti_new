@@ -177,6 +177,14 @@ new simpleParallax(bannerThumb, {
 	transition: 'cubic-bezier(0,0,0,1)'
 });
 
+const mobilePlatform = document.getElementsByClassName('mb__platform--image');
+new simpleParallax(mobilePlatform, {
+  maxTransition: 60,
+  orientation: 'up right',
+  delay: .6,
+  transition: 'cubic-bezier(0,0,0,1)'
+});
+
 // =========================================================================
 // ACCORDIAN
 // =========================================================================
