@@ -185,6 +185,14 @@ new simpleParallax(mobilePlatform, {
   transition: 'cubic-bezier(0,0,0,1)'
 });
 
+const erpWhy = document.getElementsByClassName('erp-why--bg');
+new simpleParallax(erpWhy, {
+  maxTransition: 60,
+  orientation: 'up right',
+  delay: .6,
+  transition: 'cubic-bezier(0,0,0,1)'
+});
+
 // =========================================================================
 // ACCORDIAN
 // =========================================================================

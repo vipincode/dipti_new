@@ -2,3 +2,40 @@
 // ERP RESOURCES
 // ============================================================================================
 
+#erp {
+    @extend %mt-80;
+    @extend %srv-heading;
+}
+
+.erp {
+    @include  e('feature') {
+        @extend %mt-80;
+        @include  m('prop') {
+            @extend %pd-50;
+            ul {
+                @extend %mt-30;
+                li {
+                    position: relative;
+                    padding: 10px 52px;
+                    @extend %tick-icon;
+                }
+            }
+        }
+    }
+
+    @include  e('why') {
+        position: relative;
+        @extend %mt-50;
+        text-align: center;
+        @include  m('content') {
+            color: $white;
+            @extend %pd-80;
+            @include  mq('lg') {
+                width: 75%;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            @extend %p-center;
+        }
+    }
+}

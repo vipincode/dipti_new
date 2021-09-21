@@ -4,9 +4,7 @@
 
 #dsk {
     @extend %mt-80;
-    h2 {
-        @extend %srv-heading;
-    }
+    @extend %srv-heading;
     p {
         margin-bottom: 8px;
     }

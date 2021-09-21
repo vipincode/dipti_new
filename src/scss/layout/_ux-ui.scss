@@ -1,23 +1,33 @@
 // ==========================================================================================
-// WEB SERVICES
+//  UX/UI DESIGN CODE
 // ==========================================================================================
 
-#wsr {
+#ux {
     @extend %mt-80;
-    @extend %srv-heading;
 }
 
-.wsr {
+.ux {
     @include e('content') {
-        margin-top: 50px;
         @extend %mt-80;
         @include  m('heading') {
             @extend %center;
             @include  mq('xl') {
                 width: 70%;
                 max-width: 800px;
-                margin:  80px auto;
+                margin:  0 auto;
             }
+        }
+        @include  m('process') {
+            @extend %mt-50;
+
+        }
+        @include m('items') {
+            @extend %pd-20;
+        } 
+    }
+    @include e('image') {
+        img {
+            margin: 0 auto;
         }
     }
 }
