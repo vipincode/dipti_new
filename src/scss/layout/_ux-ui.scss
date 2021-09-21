@@ -23,11 +23,38 @@
         }
         @include m('items') {
             @extend %pd-20;
+            img {
+                width: 42px;
+            }
         } 
     }
     @include e('image') {
         img {
             margin: 0 auto;
+        }
+    }
+
+    @include e('howto') {
+        @extend %pd-50;
+        ul {
+            margin-top: 30px;
+            li {
+                position: relative;
+                padding: 10px 52px;
+                @extend %tick-icon;
+            }
+        }
+    }
+
+    @include  e('ui') {
+        @extend %pd-50;
+        ul {
+            margin-top: 30px;
+            li {
+                position: relative;
+                padding: 10px 52px;
+                @extend %tick-icon;
+            }
         }
     }
 }
